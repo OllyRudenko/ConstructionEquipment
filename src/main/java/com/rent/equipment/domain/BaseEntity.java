@@ -3,12 +3,11 @@ package com.rent.equipment.domain;
 import com.rent.equipment.enums.Types;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
 @Data
-@EqualsAndHashCode(of = "id")
+//@EqualsAndHashCode(of = "id")
 @NoArgsConstructor
 @AllArgsConstructor
 @SuperBuilder

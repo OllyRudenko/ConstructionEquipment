@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestController
+@RestController("/excavators")
 public class ExcavatorController {
     private final ExcavatorService excavatorService;
 
@@ -18,9 +18,13 @@ public class ExcavatorController {
         this.excavatorService = excavatorService;
     }
 
-    @GetMapping("/excavators")
+    @GetMapping
     public ResponseEntity<List<Excavator>> getExcavators() {
         return ResponseEntity.ok(excavatorService.getAll());
     }
 
+    // todo Post, Patch, Delete methods
+    // todo mySql integration, CRUD operations, JPA vs Hibernate (must to read)
+    // todo MockMVC container tests controller (component testing)
+    // todo Exceptions handling SpringControllerAdvice
 }
